@@ -1,0 +1,126 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #121212; /* Dark background color */
+    color: #e0e0e0; /* Light grey text color */
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-indent: 50px;
+    font-family: 'New Amsterdam', sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    background-color: #333333; /* Dark grey background */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff7e5f; /* Accent color on hover */
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a; /* Dark grey background for dropdowns */
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%; /* Position below the parent */
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    color: #ff7e5f; /* Accent color on hover */
+    background-color: #333333; /* Slightly lighter grey background on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Sections */
+section {
+    margin: 0;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: #2a2a2a; /* Dark grey for sections */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1c1c1c; 
+    color: #ffffff; 
+    border-top: 1px solid #333333;
+}
+
+#about {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
