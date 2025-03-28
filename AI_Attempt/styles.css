@@ -1,0 +1,132 @@
+/* General Styles */
+html, body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    font-size: 2vw;
+    text-indent: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 1px 0;
+    line-height: 1.2;
+}
+
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #333333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff7e5f;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+    color: #ff7e5f;
+    background-color: #333333;
+}
+
+/* Sections - Initially Hidden */
+section {
+    display: block; /* Ensure sections always take up space */
+    visibility: hidden; /* Hide sections visually */
+    opacity: 0;
+    height: 0; /* Collapse height when not active */
+    overflow: hidden; /* Prevent content overflow */
+    padding: 0 40px; /* Maintain horizontal padding */
+    border-radius: 5px;
+    text-align: left;
+    transform: translateX(50px); /* Start slightly off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease, height 0.5s ease, padding 0.5s ease;
+}
+
+/* Show the active section */
+section.active {
+    visibility: visible; /* Make the section visible */
+    opacity: 1;
+    height: auto; /* Expand to fit content */
+    padding: 40px; /* Restore full padding */
+    transform: translateX(0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border-top: 1px solid #333333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
